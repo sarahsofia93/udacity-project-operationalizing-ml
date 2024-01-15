@@ -75,7 +75,14 @@ Everything can also be checked in the accompagnying screencast Video:
 
 <iframe width="560" height="315" src="https://youtu.be/ZrFv812zXNk" frameborder="0" allowfullscreen></iframe>
 
+### Improvement suggestions
 
+A few things could be improved about this project: 
+
+* The used dataset could be preprocessed, columns could be added, etc. In the project, we take the dataset as it is, but there might be a lot of potential to be gained from experiment with different transformation, additional data, etc.
+* In line with the first comment, domain knowledge can be used to improve input data, but also to select models and methods for the classification task
+* We could use GPU instead of CPU for faster computation that would allow us to test more models in the same time
+* Another possible approach would be using deep learning, i.e., neural networks with several layers, for this task. This does not necessarily lead to improvements since NNs are not always better than traditional approaches, but it is worth a try nevertheless. Using a NN would allow us to try out a more powerful approach that maps input-output relations that cannot be grasped by traditional classification methods.
 
 
 
