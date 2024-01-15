@@ -16,13 +16,73 @@ Finally, we automate the process by using the Pipeline class of the Python SDK i
 
 ### Run AutoML Experiment and view best model
 
+Registered Dataset with the Bankmarketing dataset: 
 ![Registered Dataset with the Bankmarketing dataset](screenshots/step2_dataset_final.png)
 
+
+The experiment is completed:
 ![Experiment is completed](screenshots/step2_experiment_complete_final.png)
 
+Overview of the experiment with best model summary:
 ![Overview of the experiment with best model summary](screenshots/step2_exp_overview_final.png)
 
+Details of the best model:
 ![Details of the best model](screenshots/step2_experiment_bestModel_final.png)
+
+
+### Deploy the model and enable logging
+
+Application Insights are enabled:
+![App](screenshots/step4_ApplicationInsigh_enabled_final.png)
+
+Logging outputs:
+![Logger](screenshots/step4_Logger_final.png)
+
+### Swagger Documentation
+
+Swagger running on localhost:
+![swag](screenshots/Step7_swaggerscreenshot.png)
+
+![swag2](screenshots/step7_swaggerPart2.png)
+
+### Consume Model Endpoints
+
+Output of endpoint.py in Terminal:
+![end](screenshots/step8_endpoint.png)
+
+
+### Create, publish and consume a pipeline
+
+The pipeline has been created:
+![91](screenshots/step9_1_pipeline.png)
+
+Pipeline endpoint:
+![92](screenshots/step9_2_pipelineendpoint.png)
+
+Published Pipeline Overview with status ACTIVE:
+![94](screenshots/step9_4_Rest.png)
+
+RunDetails Widget:
+
+Here, unfortunately, executing the cells in the notebook did not produced the expected widgets (even though there was no error message). I investigated the problem to no avail and unfortunately ran out of time in my lab session. See the following screenshots for the code cells and output:
+![96](screenshots/step9_6_run.png)
+![962](screenshots/step9_6_run2.png)
+
+Completed experiment run of the pipeline:
+![963](screenshots/step9_6_run3.png)
+
+Everything can also be checked in the accompagnying screencast Video:
+
+<iframe width="560" height="315" src="https://youtu.be/ZrFv812zXNk" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+
+
+
+
+
 
 
 
