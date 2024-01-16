@@ -16,59 +16,59 @@ Finally, we automate the process by using the Pipeline class of the Python SDK i
 
 ### Run AutoML Experiment and view best model
 
-Registered Dataset with the Bankmarketing dataset: 
+In this screenshot, you can see the registered Datasets in the workspace with the Bankmarketing dataset. The dataset was retreived from the provided url and then created as tabular dataset through the Azure ML Studio UI. All columns were left at the default values.
 ![Registered Dataset with the Bankmarketing dataset](screenshots/step2_dataset_final.png)
 
 
-The experiment is completed:
+Here you can see the completed experiment. First, a new AutoML experiment was created ("ml-experiment-1"). Then, an AmlCompute cluster was created for the comutation of the experiment, using the vm size Standard_D3_V2 as advised in the project guidelines. Using the previously registered dataset, the experiment was run with the task of a classification problem using AtoML. After about 25 minutes, the experiment was completed as shown in the screenshot.
 ![Experiment is completed](screenshots/step2_experiment_complete_final.png)
 
-Overview of the experiment with best model summary:
+Upon clicking on the completed experiment, the best model can be viewed on the right-hand side. It turned out to be a VotingEnsemble with an AUC of 0.948.
 ![Overview of the experiment with best model summary](screenshots/step2_exp_overview_final.png)
 
-Details of the best model:
+Details of the best model can be viewed by clicking on it in the UI. From this interface, the model was deployed using the UI (see "Deploy" button) as instructed in the project guidelines.
 ![Details of the best model](screenshots/step2_experiment_bestModel_final.png)
 
 
 ### Deploy the model and enable logging
 
-Application Insights are enabled:
+The model was deployed as a web-service using ACI and with Authentication enabled.  Then, Application Insights was enabled by running the logs.py file with the setting for enabling Application Insights set on "True". We can see that Application Insights was succesfully enabled in the following screenshot:
 ![App](screenshots/step4_ApplicationInsigh_enabled_final.png)
 
-Logging outputs:
+Again, by running the logs.py file, the logs can be viewed in the Git Bash Temrinal:
 ![Logger](screenshots/step4_Logger_final.png)
 
 ### Swagger Documentation
 
-Swagger running on localhost:
+In the next step, I consumed the deployed model using Swagger.  For this, I first downloaded the file swagger.json from the URI provided in AzureML. In swagger.sh, altered the port to 9000, ran the bash script and then ran the serve.py script (without alterations). In the following screenshots you can see that swagger could then be accessed via localhost:9000 and the contents of the API methods and responsed for the model are displayed. 
+
 ![swag](screenshots/Step7_swaggerscreenshot.png)
 
 ![swag2](screenshots/step7_swaggerPart2.png)
 
 ### Consume Model Endpoints
 
-Output of endpoint.py in Terminal:
+Next,  I used the endpoint.py script to interact with the trained model. I first modified the uri and key in the model and then ran the code which resulted in the json output as expected:
 ![end](screenshots/step8_endpoint.png)
 
 
 ### Create, publish and consume a pipeline
 
+Finally, the task was to create, publish and consume a pipeline to automate the workflow. This was done by executing the notebok provided in the project files. You can see the successful results in the following screenshots and the screencast:
 The pipeline has been created:
 ![91](screenshots/step9_1_pipeline.png)
 
-Pipeline endpoint:
+The Pipeline endpoint and the dataset with the AutoML module can be viewed:
 ![92](screenshots/step9_2_pipelineendpoint.png)
 
-Published Pipeline Overview with status ACTIVE:
+Here you can see the published Pipeline Overview with status ACTIVE:
 ![94](screenshots/step9_4_Rest.png)
 
-RunDetails Widget:
+Here you can see the "RunDetails Widget" displays the steps running. This was previously not displayed corretcly, but in a new experiment run I was able to display the widget by opening the notebook in Jupyter.
+![96](screenshots/WIDGET)
+![962](screenshots/WIDGET2.png)
 
-Here, unfortunately, executing the cells in the notebook did not produced the expected widgets (even though there was no error message). I investigated the problem to no avail and unfortunately ran out of time in my lab session. See the following screenshots for the code cells and output:
-![96](screenshots/step9_6_run.png)
-![962](screenshots/step9_6_run2.png)
-
-Completed experiment run of the pipeline:
+Here you can see the completed experiment run of the pipeline:
 ![963](screenshots/step9_6_run3.png)
 
 Everything can also be checked in the accompagnying screencast Video:
