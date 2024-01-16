@@ -65,7 +65,7 @@ Here you can see the published Pipeline Overview with status ACTIVE:
 ![94](screenshots/step9_4_Rest.png)
 
 Here you can see the "RunDetails Widget" displays the steps running. This was previously not displayed corretcly, but in a new experiment run I was able to display the widget by opening the notebook in Jupyter.
-![96](screenshots/WIDGET)
+![96](screenshots/WIDGET.png)
 ![962](screenshots/WIDGET2.png)
 
 Here you can see the completed experiment run of the pipeline:
